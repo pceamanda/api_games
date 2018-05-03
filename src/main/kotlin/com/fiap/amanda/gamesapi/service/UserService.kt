@@ -1,6 +1,5 @@
 package com.fiap.amanda.gamesapi.service
 
-import com.fiap.amanda.gamesapi.entity.Game
 import com.fiap.amanda.gamesapi.entity.User
 import com.fiap.amanda.gamesapi.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,7 +18,7 @@ class UserService {
         return userRepository.findAll()
     }
 
-    fun findByUsernameAndPassword(username: String, password: String): List<Game> {
+    fun findByUsernameAndPassword(username: String, password: String): User {
         return userRepository.findByUsernameAndPassword(username, password)
     }
 

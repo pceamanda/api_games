@@ -1,5 +1,9 @@
 package com.fiap.amanda.gamesapi.entity
 
-data class User(var id: Long?,
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
+
+@Document
+data class User(@Id var id: Long?,
                 var username: String,
                 var password: String)
