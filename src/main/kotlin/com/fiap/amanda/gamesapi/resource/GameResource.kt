@@ -33,8 +33,8 @@ class GameResource {
         gameService.save(game)
     }
 
-    @DeleteMapping(path = ["/{id}"])
-    fun delete(@PathParam("id") id: Long) {
+    @DeleteMapping("/{id}")
+    fun delete(@PathVariable("id") id: Long) {
         gameService.delete(id)
     }
 
