@@ -18,7 +18,7 @@ class GameResource {
         return gameService.findAll()
     }
 
-    @GetMapping(path = ["/{category}"])
+    @GetMapping("/{category}")
     fun findByGategory(@PathVariable("category") category: String) : List<Game>{
         return gameService.findByCategory(category)
     }

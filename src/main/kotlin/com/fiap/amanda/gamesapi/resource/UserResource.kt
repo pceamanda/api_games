@@ -16,8 +16,8 @@ class UserResource {
     @Autowired
     lateinit var userService: UserService
 
-    @PostMapping(path = ["/login"])
-    fun login(@RequestBody user: User) : User{
+    @PostMapping("/login")
+    fun login(@RequestBody user: User) : User {
         return userService.findByUsernameAndPassword(user.username, user.password)
     }
 
